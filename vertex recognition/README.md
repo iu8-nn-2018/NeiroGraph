@@ -22,9 +22,11 @@
 - [Выделение границ](https://ru.wikipedia.org/wiki/Выделение_границ)
 #### description (tags): Выделение границ подходы
 - [x]  [Оператор Кэнни](https://ru.wikipedia.org/wiki/Оператор_Кэнни)
-<image src='k1.png'> | <image src='k2.png'>
+<image src='k1.png'> 
+<image src='k2.png'>
 - [x]  [Оператор Собеля](https://ru.wikipedia.org/wiki/Оператор_Собеля)
-<image src='c1.png'> | <image src='c2.png'>
+<image src='c1.png'>
+<image src='c2.png'>
 - [ ]  [Перекрёстный оператор Робертса](https://ru.wikipedia.org/wiki/Перекрёстный_оператор_Робертса)
 <image src='r.png'>
 - [ ]  [Оператор Прюитт](https://ru.wikipedia.org/wiki/Оператор_Прюитт)
