@@ -18,5 +18,4 @@
 ### Examples:
 <image src='lines.png'>
 <image src='3lines.png'>
-<image src='10lines.png>
-
+<image src='10lines.png'>
