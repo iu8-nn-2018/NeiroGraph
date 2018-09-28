@@ -15,5 +15,8 @@
 ### Отрисовка линии
 #### description (tags): hough_lines
 - [x] [Hough_lines](https://docs.opencv.org/3.4.0/d9/db0/tutorial_hough_lines.html)
-
+### Examples:
+<image src='lines.png'>
+<image src='3lines.png'>
+<image src='10lines.png>
 
