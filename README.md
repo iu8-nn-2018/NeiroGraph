@@ -2,9 +2,7 @@
 ## Course project
 
 # Algorithm
-<image src='alg1.png'>
-<image src='alg2.png'>
-<image src='alg3.png'>
+<image src='alg.png'>
 
 ## Vertex search
 - [ ] Перевод в черно-белый цвет фото
