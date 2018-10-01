@@ -53,6 +53,8 @@ def convolve2d(image, kernel):
 image_sharpen = convolve2d(img, kernel)
 ```
 ### Result
+<img src='12.png'>
+
 <img src='orig.png'>
 
 <img src='gray.png'>
