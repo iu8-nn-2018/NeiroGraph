@@ -20,17 +20,24 @@ The convolution is identical to the operation of the clipping but the core is mi
 #### RGB and Kernel
 <img src='rgb.gif'>
 
+## kernel.kern
+### Write your kernel in this file
+```
+-1 -1 -1
+-1 8 -1
+-1 -1 -1
+```
+
 ## convolve.py
-### Load the image 
-```python
-# Load the image
-img = io.imread('12.png')
+### Run the script from terminal or command line
 ```
-### Kernel
-```python
-# Convolve the sharpen kernel and the image
-kernel = np.array([[0, -1, 0], [-1, 5, -1], [0, -1, 0]])
+python convolve.py -i 12.png -f kernel.kern
 ```
+#### OR
+```
+python convolve.py --image 12.png --file kernel.kern
+```
+
 ### convolution2d
 ```python
 def convolve2d(image, kernel):
