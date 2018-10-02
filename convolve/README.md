@@ -12,7 +12,7 @@ The convolution is identical to the operation of the clipping but the core is mi
 ### Kernel
 - [Kernel_cores](https://en.wikipedia.org/wiki/Kernel_(image_processing)
 
-#### Who it works?
+#### How it works?
 <img src='stride1.gif'>
 
 <img src='stride2.gif'>
