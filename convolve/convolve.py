@@ -3,6 +3,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 from skimage import exposure
 from scipy import misc
+import sys
+import os
+import argparse
+import cv2
 
 
 # This function which takes an image and a kernel
@@ -28,42 +32,62 @@ def convolve2d(image, kernel):
             output[y, x] = (kernel * image_pad[y:y + 3, x:x + 3]).sum()
     return output
 
+def readarg(image, kern):
+    # Load the image
+    img = io.imread(image)
+    # img = image
+    # Convert the image to grayscale (1 channel)
+    img = color.rgb2gray(img)
+
+    # Adjust the contrast of the image by applying Histogram Equalization
+    image_equalized = exposure.equalize_adapthist(img / np.max(np.abs(img)), clip_limit=0.03)
+    plt.imshow(image_equalized, cmap=plt.cm.gray)
+    plt.axis('off')
+    plt.savefig('orig.png')
+    plt.show()
+
+    # KERNEL
+    # Convolve the sharpen kernel and the image
+    kernel = kern
+
+    # call to action
+    image_sharpen = convolve2d(img, kernel)
+
+    # Plot the filtered image
+    plt.imshow(image_sharpen, cmap=plt.cm.gray)
+    plt.axis('off')
+    plt.savefig('gray.png')
+    plt.show()
+
+    # Adjust the contrast of the filtered image by applying Histogram Equalization
+    image_sharpen_equalized = exposure.equalize_adapthist(
+        image_sharpen / np.max(np.abs(image_sharpen)),
+        clip_limit=0.03)
+    plt.imshow(image_sharpen_equalized, cmap=plt.cm.gray)
+    plt.axis('off')
+    plt.savefig('black.png')
+    plt.show()
 
 
-# Load the image
-img = io.imread('12.png')
+if __name__ == '__main__':
+    if len(sys.argv) >= 3:
+        ap = argparse.ArgumentParser()
+        ap.add_argument("-i", "--image", required=True, help="Path to the image")
+        ap.add_argument('-f', '--file', type=argparse.FileType('r'), help="Open specified file")
 
+        # Text
+        argum = ap.parse_args()
+        kernel = np.loadtxt(argum.file, dtype=int)
+        print('KERNEL: ', kernel)
 
-# Convert the image to grayscale (1 channel)
-img = color.rgb2gray(img)
+        # Image
+        args = vars(ap.parse_args())
+        # image = cv2.imread(args["image"])
+        img = args["image"] #image.copy()
 
-# Adjust the contrast of the image by applying Histogram Equalization
-image_equalized = exposure.equalize_adapthist(img / np.max(np.abs(img)), clip_limit=0.03)
-plt.imshow(image_equalized, cmap=plt.cm.gray)
-plt.axis('off')
-plt.savefig('orig.png')
-plt.show()
+        # Call to action
+        readarg(img, kernel)
 
-
-# KERNEL
-# Convolve the sharpen kernel and the image
-# kernel = np.array([[0, -1, 0], [-1, 5, -1], [0, -1, 0]])
-kernel = np.array([[-1, -1, -1], [-1, 8, -1], [-1, -1, -1]])[..., None]
-
-
-# call to action
-image_sharpen = convolve2d(img, kernel)
-
-# Plot the filtered image
-plt.imshow(image_sharpen, cmap=plt.cm.gray)
-plt.axis('off')
-plt.savefig('gray.png')
-plt.show()
-
-# Adjust the contrast of the filtered image by applying Histogram Equalization
-image_sharpen_equalized = exposure.equalize_adapthist(image_sharpen / np.max(np.abs(image_sharpen)),
-                                                      clip_limit=0.03)
-plt.imshow(image_sharpen_equalized, cmap=plt.cm.gray)
-plt.axis('off')
-plt.savefig('black.png')
-plt.show()
+    else:
+        print("Error.")
+        sys.exit(1)
