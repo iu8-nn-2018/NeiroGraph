@@ -21,6 +21,10 @@ The convolution is identical to the operation of the clipping but the core is mi
 <img src='rgb.gif'>
 
 ## kernel.kern
+In directory you should have 3 fies:
+- [x] convolve.py
+- [x] yourimgage.png (or *.jpg, *,jpeg)
+- [x] kernel.kern
 ### Write your kernel in this file
 ```
 -1 -1 -1
