@@ -13,12 +13,12 @@ The convolution is identical to the operation of the clipping but the core is mi
 - [Kernel_cores](https://en.wikipedia.org/wiki/Kernel_(image_processing)
 
 #### How it works?
-<img src='stride1.gif'>
+<img src='theory/stride1.gif'>
 
-<img src='stride2.gif'>
+<img src='theory/stride2.gif'>
 
 #### RGB and Kernel
-<img src='rgb.gif'>
+<img src='theory/rgb.gif'>
 
 ## kernel.kern
 In directory you should have 3 fies:
@@ -64,10 +64,10 @@ def convolve2d(image, kernel):
 image_sharpen = convolve2d(img, kernel)
 ```
 ### Result
-<img src='12.png'>
+<img src='theory/12.png'>
 
-<img src='orig.png'>
+<img src='theory/orig.png'>
 
-<img src='gray.png'>
+<img src='theory/gray.png'>
 
-<img src='black.png'>
+<img src='theory/black.png'>
