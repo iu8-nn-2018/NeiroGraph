@@ -10,7 +10,7 @@ The convolution is identical to the operation of the clipping but the core is mi
 * Boundary mirroring
 
 ### Kernel
-- [Kernel_cores](https://en.wikipedia.org/wiki/Kernel_(image_processing)
+- [Kernel_cores](https://en.wikipedia.org/wiki/Kernel_(image_processing))
 
 #### How it works?
 <img src='stride1.gif'>
