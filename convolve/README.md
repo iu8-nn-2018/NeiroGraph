@@ -20,19 +20,41 @@ The convolution is identical to the operation of the clipping but the core is mi
 #### RGB and Kernel
 <img src='rgb.gif'>
 
-## kernel.kern
-In directory you should have 3 fies:
+## kernels
+In this directory you can find different kernels to your images.
+
+## pictures
+In this directory you can find images and results.
+
+## src
+In directory you should have 2 fies:
+- [x] convolve_2.py
 - [x] convolve.py
-- [x] yourimgage.png (or *.jpg, *,jpeg)
-- [x] kernel.kern
-### Write your kernel in this file
+
+## convolve_2.py
+### New feature!
+You can write in kernel file fractional numbers!
+```
+-1 -1 -1
+-1 8/9 -1
+-1 -1 -1
+```
+### Run the script from terminal or command line
+```
+python convolve.py 12.png kernel.kern
+```
+### convolution2d
+It's similarly as in convolve.py
+
+## convolve.py
+### Attention!
+### Write your kernel correctly:
+Only integer numbers
 ```
 -1 -1 -1
 -1 8 -1
 -1 -1 -1
 ```
-
-## convolve.py
 ### Run the script from terminal or command line
 ```
 python convolve.py -i 12.png -f kernel.kern
@@ -63,11 +85,3 @@ def convolve2d(image, kernel):
 # Get a numpy array of size [image_height, image_width]
 image_sharpen = convolve2d(img, kernel)
 ```
-### Result
-<img src='12.png'>
-
-<img src='orig.png'>
-
-<img src='gray.png'>
-
-<img src='black.png'>

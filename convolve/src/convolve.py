@@ -2,11 +2,8 @@ from skimage import io, color
 import matplotlib.pyplot as plt
 import numpy as np
 from skimage import exposure
-from scipy import misc
 import sys
-import os
 import argparse
-import cv2
 
 
 # This function which takes an image and a kernel
@@ -82,8 +79,7 @@ if __name__ == '__main__':
 
         # Image
         args = vars(ap.parse_args())
-        # image = cv2.imread(args["image"])
-        img = args["image"] #image.copy()
+        img = args["image"]
 
         # Call to action
         readarg(img, kernel)
