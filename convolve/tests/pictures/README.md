@@ -19,10 +19,10 @@ The convolution is identical to the operation of the clipping but the core is mi
 <img src='12.png'>
 
 ### Convert to grey
-<img src='orig.png'>
+<img src='12orig.png'>
 
 ### Convert
-<img src='gray.png'>
+<img src='12gray.png'>
 
 ### Result
-<img src='black.png'>
+<img src='12black.png'>
