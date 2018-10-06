@@ -85,14 +85,3 @@ def convolve2d(image, kernel):
 # Get a numpy array of size [image_height, image_width]
 image_sharpen = convolve2d(img, kernel)
 ```
-<<<<<<< HEAD
-### Result
-<img src='theory/12.png'>
-
-<img src='theory/orig.png'>
-
-<img src='theory/gray.png'>
-
-<img src='theory/black.png'>
-=======
->>>>>>> features
