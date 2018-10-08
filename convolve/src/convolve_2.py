@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import matplotlib.pyplot as plt
 from skimage import exposure
 from skimage import io, color
@@ -29,8 +31,8 @@ def readarg(image, kern):
     img = color.rgb2gray(img)
 
     # Adjust the contrast of the image by applying Histogram Equalization
-    image_equalized = exposure.equalize_adapthist(img / np.max(np.abs(img)), clip_limit=0.03)
-    plt.imshow(image_equalized, cmap=plt.cm.gray)
+    # image_equalized = exposure.equalize_adapthist(img / np.max(np.abs(img)), clip_limit=0.03)
+    plt.imshow(img)
     plt.axis('off')
     plt.savefig('orig.png')
     plt.show()
@@ -51,26 +53,22 @@ def readarg(image, kern):
 # converter to numpy array
 def readkern(file):
     narray = list()
-    for i in file:
-        # delete ' ' in the end
-        text = i.split(' ')
-        arr = list(text[-1])
-        arr.remove('\n')
-        text[-1] = ''.join(arr)
+    for line in file:
+        text = line.replace('\n', '').split(' ')
+        while '' in text:
+            text.remove('')
+        print(text)
         # list to create numpy array
-        narr = list()
-        # convert '8/9' to float number
-        for j in text:
-            if len(j) == 3:
-                j = round(float(float(j[0]) / int(j[2])), 3)
-            elif len(j) == 4:
-                j = -1 * round(float(float(j[1]) / int(j[3])), 3)
-            else:
-                # convert from str to float
-                j = float(j)
-            narr.append(j)
+        narr = list(
+            map(
+                lambda x: float(x),
+                text
+            )
+        )
         narray.append(narr)
-    return np.asarray(narray)
+
+    print(narray)
+    return np.asarray(narray, dtype=float)
 
 if __name__ == '__main__':
     if len(sys.argv) < 3:
