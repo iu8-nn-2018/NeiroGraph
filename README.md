@@ -37,3 +37,9 @@
 
 # tests
 - [Tests](https://github.com/iu8-nn-2018/NeiroGraph/tree/develop/test)
+
+# Developer branches
+- [Canny](https://github.com/iu8-nn-2018/NeiroGraph/tree/Canny)
+- [Haar_Cascade for Google Cloud Platform](https://github.com/iu8-nn-2018/NeiroGraph/tree/Haar_Cascade)
+- [Experiments](https://github.com/iu8-nn-2018/NeiroGraph/tree/experiments)
+- [MarkUp](https://github.com/iu8-nn-2018/NeiroGraph/tree/markup)
