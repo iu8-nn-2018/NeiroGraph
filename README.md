@@ -13,18 +13,27 @@
 - [ ] Filter with **neural network**
 
 ## Text recognition
-- [x ] Mnist
+- [x] Mnist
 
 ## Edge search
 - [x] Convert into black/white image
 - [x] Canny edge detector
 
 # Menu of repository
-<img src='branch-develop'>
+<img src='branch-develop.png'>
 
-## Dataset
-- [Mark up]()
-- [Generate dataset]()
-- [Generate file .dat]()
+## dataset
+- [Mark up](https://github.com/iu8-nn-2018/NeiroGraph/tree/develop/dataset/markup)
+- [Generate dataset](https://github.com/iu8-nn-2018/NeiroGraph/tree/develop/dataset/gendataset)
+- [Generate file .dat](https://github.com/iu8-nn-2018/NeiroGraph/tree/develop/dataset/gendat)
+- [Filtering images](https://github.com/iu8-nn-2018/NeiroGraph/tree/develop/dataset/filtering_images)
+- [Resize images](https://github.com/iu8-nn-2018/NeiroGraph/tree/develop/dataset/resize_images)
 
-## 
+## src
+- [Vertex](https://github.com/iu8-nn-2018/NeiroGraph/tree/develop/src/vertex)
+- [Edges](https://github.com/iu8-nn-2018/NeiroGraph/tree/develop/src/edges)
+- [Models](https://github.com/iu8-nn-2018/NeiroGraph/tree/develop/src/models)
+- [Train](https://github.com/iu8-nn-2018/NeiroGraph/tree/develop/src/train)
+
+# tests
+- [Tests](https://github.com/iu8-nn-2018/NeiroGraph/tree/develop/test)
