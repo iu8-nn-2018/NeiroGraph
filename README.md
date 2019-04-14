@@ -10,19 +10,19 @@
 ## Menu - steps of algorithm
 - [x] [This algorithmes will be using in last project]()
 - [ ] **In process**
-## Dataset
-- [x] [Markup]()
-- [Makedataset]()
-- [refactor_dataset]()
+## [Dataset](https://github.com/iu8-nn-2018/NeiroGraph/tree/Steps-of-project-and-description/Dataset)
+- [x] [Markup](https://github.com/iu8-nn-2018/NeiroGraph/tree/Steps-of-project-and-description/Dataset/markup)
+- [Rename]()
+- [Refactor_dataset]()
 - [GenGraph]()
 
-## Image prepocessing
+## [Image prepocessing](https://github.com/iu8-nn-2018/NeiroGraph/tree/Steps-of-project-and-description/Image%20processing)
 - [x] [Convolutional-Layers]()
 - [Convolve]()
 - [x] [Canny]()
-- [prepocessing]()
+- [Prepocessing]()
 
-## Vertex search
+## [Vertex search](https://github.com/iu8-nn-2018/NeiroGraph/tree/Steps-of-project-and-description/Vertex)
 - [x] [Find vertex]()
     - [x] [Haar Cascade]()
     - [Hough / Blob / Mser]()
@@ -33,10 +33,9 @@
 ## Text recognition
 - [ ] Mnist
 
-## Edge search
-- [ ] [haar]()
+## [Edge search](https://github.com/iu8-nn-2018/NeiroGraph/tree/Steps-of-project-and-description/Edge)
+- [haar]()
 - [x] [Canny_lines]()
 - [x] [detect_start_lines]()
 - [x] [tracker_pix]()
-- [ ] [Hough]()
-- [ ] 
+- [Hough]()
