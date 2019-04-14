@@ -1,2 +1,0 @@
-# NeiroGraph
-Course project
