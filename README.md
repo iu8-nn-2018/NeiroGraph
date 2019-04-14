@@ -10,10 +10,10 @@
     - Center and radius (Hough transform)
     - Haar Cascade
     - Neural network
-- [ ] Filter with **neural network**
+- [x] Filter with **neural network**
 
 ## Text recognition
-- [x] Mnist
+- [ ] Mnist
 
 ## Edge search
 - [x] Convert into black/white image
